@@ -1,4 +1,4 @@
-import { Cloud, BarChart3, Code2, Server, Layers, Shield } from 'lucide-react';
+import { Cloud, BarChart3, Code2, Server, Layers, Shield, Briefcase } from 'lucide-react';
 
 export default function ServicesGrid() {
   const services = [
@@ -48,7 +48,7 @@ export default function ServicesGrid() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-8 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-750 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group glass-card p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex items-center justify-center w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl mb-6 group-hover:scale-110 transition-transform">
                 <service.icon className="w-7 h-7 text-blue-600 dark:text-blue-400" />
@@ -66,5 +66,3 @@ export default function ServicesGrid() {
     </section>
   );
 }
-
-import { Briefcase } from 'lucide-react';

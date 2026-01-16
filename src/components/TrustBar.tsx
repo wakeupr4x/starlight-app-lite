@@ -2,7 +2,7 @@ import { Building2, Heart, Home, ShoppingBag } from 'lucide-react';
 
 export default function TrustBar() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 glass border-y">
       <div className="max-w-6xl mx-auto">
         <p className="text-center text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-8 font-semibold">
           Trusted Technical Expertise for Modern Enterprises

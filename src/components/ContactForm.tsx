@@ -59,7 +59,7 @@ export default function ContactForm() {
         </p>
 
         {isSuccess ? (
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-8 text-center">
+          <div className="glass-card p-8 text-center">
             <div className="flex items-center justify-center w-16 h-16 bg-green-100 dark:bg-green-900/40 rounded-full mx-auto mb-4">
               <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
             </div>
@@ -74,11 +74,11 @@ export default function ContactForm() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Your name
-                </label>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-800 dark:text-gray-300 mb-2">
+                Your name
+              </label>
                 <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400 z-10 pointer-events-none" />
                   <input
                     type="text"
                     id="name"
@@ -86,17 +86,17 @@ export default function ContactForm() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Enter your name"
-                    className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900 dark:text-white placeholder-gray-400"
+                    className="w-full pl-12 pr-4 py-3 glass-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-800 dark:text-gray-300 mb-2">
                   Email id
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400 z-10 pointer-events-none" />
                   <input
                     type="email"
                     id="email"
@@ -104,18 +104,18 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="Enter your email"
-                    className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900 dark:text-white placeholder-gray-400"
+                    className="w-full pl-12 pr-4 py-3 glass-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
                 </div>
               </div>
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-800 dark:text-gray-300 mb-2">
                 Message
               </label>
               <div className="relative">
-                <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-500 dark:text-gray-400" />
                 <textarea
                   id="message"
                   required
@@ -123,7 +123,7 @@ export default function ContactForm() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Enter your message"
-                  className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900 dark:text-white placeholder-gray-400 resize-none"
+                  className="w-full pl-12 pr-4 py-3 glass-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                 />
               </div>
             </div>
@@ -137,7 +137,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group flex items-center justify-center space-x-2 w-full md:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white rounded-full transition-all duration-300 hover:shadow-xl hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed text-lg font-medium"
+              className="group flex items-center justify-center space-x-2 w-full md:w-auto px-8 py-4 glass-button text-white rounded-full transition-all duration-300 hover:shadow-xl hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed text-lg font-medium"
             >
               <span>{isSubmitting ? 'Sending...' : 'Submit'}</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

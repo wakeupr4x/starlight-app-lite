@@ -1,0 +1,5 @@
+/* Hero Animation Styles */
+.hero-animation-canvas {
+  background: transparent;
+  will-change: auto;
+}

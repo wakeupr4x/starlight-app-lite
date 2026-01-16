@@ -1,4 +1,5 @@
 import { Users, Brain, Zap } from 'lucide-react';
+import AnimatedHeroBackground from './AnimatedHeroBackground';
 
 export default function WhyStarlight() {
   const reasons = [
@@ -20,8 +21,9 @@ export default function WhyStarlight() {
   ];
 
   return (
-    <section id="why-starlight" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
-      <div className="max-w-6xl mx-auto">
+    <section id="why-starlight" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
+      <AnimatedHeroBackground />
+      <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-4">
           Why Leaders Choose Starlight Tech
         </h2>
@@ -33,7 +35,7 @@ export default function WhyStarlight() {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="glass-card p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl mb-6 shadow-lg">
                 <reason.icon className="w-8 h-8 text-white" />

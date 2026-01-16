@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center space-x-2">
@@ -67,7 +67,7 @@ export default function Navbar() {
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="flex items-center space-x-2 px-4 md:px-6 py-2 md:py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 text-sm md:text-base"
+              className="flex items-center space-x-2 px-4 md:px-6 py-2 md:py-2.5 glass-button text-white rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 text-sm md:text-base font-medium"
             >
               <span>Connect</span>
               <ArrowRight className="w-4 h-4" />
