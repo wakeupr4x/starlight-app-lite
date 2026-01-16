@@ -1,4 +1,5 @@
 import { Mail, Linkedin, Facebook, Twitter } from 'lucide-react';
+import lgp_strlt from '../public/lgp_strlt.png';
 
 export default function Footer() {
   const scrollToSection = (id: string) => {
