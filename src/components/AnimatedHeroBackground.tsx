@@ -33,7 +33,7 @@ export default function AnimatedHeroBackground() {
 
     // Initialize stars
     const initStars = () => {
-      starsRef.current = Array.from({ length: 40 }, (_, i) => ({
+      starsRef.current = Array.from({ length: 80 }, (_, i) => ({
         id: i,
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height * 0.8, // keep mostly in upper portion
@@ -91,7 +91,7 @@ export default function AnimatedHeroBackground() {
           const dy = star2.y - star1.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 150) {
+          if (distance < 180) {
             ctx.beginPath();
             ctx.moveTo(star1.x, star1.y);
             ctx.lineTo(star2.x, star2.y);

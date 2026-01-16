@@ -7,10 +7,12 @@ import CaseStudies from './components/CaseStudies';
 import WhyStarlight from './components/WhyStarlight';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import Cursor from './components/cursor';
 
 function App() {
   return (
     <>
+      <Cursor />
       <Navbar />
       <Hero />
       <TrustBar />

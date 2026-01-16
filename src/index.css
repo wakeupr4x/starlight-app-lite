@@ -1,9 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
 
 html, body {
   font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
 }
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+html, body {
+  font-family: "Bricolage Grotesque", system-ui, -apple-system,
+               BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
 
 @tailwind base;
 @tailwind components;
@@ -50,3 +64,29 @@ html, body {
   background-color: currentColor;
   animation: typewriter-cursor 0.8s infinite;
 }
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border: 2px solid rgba(99, 102, 241, 0.6);
+  border-radius: 9999px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: border-color 0.2s ease;
+}
+
+.cursor-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: rgb(99, 102, 241);
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}
+
